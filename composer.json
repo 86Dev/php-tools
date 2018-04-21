@@ -14,5 +14,10 @@
             "name": "jtisseau",
             "email": "jonathan.tisseau@86dev.fr"
         }
-    ]
+	],
+	"autoload": {
+		"psr-4": {
+			"\\PHPTools\\": "src/"
+		}
+	}
 }
