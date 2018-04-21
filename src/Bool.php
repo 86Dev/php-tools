@@ -7,7 +7,7 @@ namespace PHPTools;
  * @version 1.0
  * @author 86Dev
  */
-abstract class BoolHelper
+abstract class Bool
 {
 	/**
 	 * Convert a string to boolean

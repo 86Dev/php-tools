@@ -8,7 +8,7 @@ namespace PHPTools;
  * @version 1.0
  * @author 86Dev
  */
-abstract class DebugHelper
+abstract class Debug
 {
 	/**
 	 * Dump a value into a "pre" tag
