@@ -16,6 +16,7 @@ abstract class BoolHelper
 	 */
 	public static function to_bool($value)
 	{
+		if (is_bool($value)) return $value;
 		return self::is_true_string($value);
 	}
 
