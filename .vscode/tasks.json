@@ -6,12 +6,14 @@
 		{
 			"label": "Update composer",
 			"type": "shell",
-			"command": "composer update"
+			"command": "composer update",
+			"problemMatcher": []
 		},
 		{
 			"label": "All tests",
 			"type": "shell",
-			"command": "./vendor/bin/phpunit --bootstrap vendor/autoload.php tests/"
+			"command": "./vendor/bin/phpunit --bootstrap vendor/autoload.php tests/",
+			"problemMatcher": []
 		}
 	]
 }
