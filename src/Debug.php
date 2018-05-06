@@ -56,7 +56,7 @@ abstract class Debug
 	 */
 	public static function exception2array($exception)
 	{
-		return [
+		$ex = [
 			'type' => get_class($exception),
 			'message' => $exception->getMessage(),
 			'code' => $exception->getCode(),
@@ -65,5 +65,8 @@ abstract class Debug
 			'trace' => $exception->getTrace(),
 			//'previous' => $exception->getPrevious() ? exception_to_array($exception->getPrevious()) : null,
 		];
+		if (property_exists($exception, 'severity'))
+			$ex['severity'] = $exception->severity;
+		return $ex;
 	}
 }
