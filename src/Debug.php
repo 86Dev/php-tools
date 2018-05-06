@@ -56,6 +56,7 @@ abstract class Debug
 	 */
 	public static function exception2array($exception)
 	{
+		if (!$exception) return null;
 		$ex = [
 			'type' => get_class($exception),
 			'message' => $exception->getMessage(),
