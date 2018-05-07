@@ -66,8 +66,8 @@ abstract class Debug
 			'trace' => $exception->getTrace(),
 			//'previous' => $exception->getPrevious() ? exception_to_array($exception->getPrevious()) : null,
 		];
-		if (property_exists($exception, 'severity'))
-			$ex['severity'] = $exception->severity;
+		if (method_exists($exception, 'getSeverity'))
+			$ex['severity'] = $exception->getSeverity();
 		return $ex;
 	}
 }
