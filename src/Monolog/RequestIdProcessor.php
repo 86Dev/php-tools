@@ -5,7 +5,7 @@ namespace PHPTools\Monolog;
 /**
  * Adds unique request ID into records
  */
-class ProcessIdProcessor
+class RequestIdProcessor
 {
     /**
      * @param  array $record
