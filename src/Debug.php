@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types = 1);
+
 namespace PHPTools;
 
 /**
@@ -12,25 +14,28 @@ abstract class Debug
 {
 	/**
 	 * Dump a value into a "pre" tag
+	 *
 	 * @param mixed $value
 	 */
-	public static function dumpit($value)
+	public static function dumpit($value) : void
 	{
 		echo '<pre>'.var_export($value, true).'</pre>';
 	}
 
 	/**
 	 * Dump a value in the javascript console
-	 * @param mixed $value
+	 *
+	 * @param mixed  $value
 	 * @param string $method Specifies the console method to use. No check is made to ensure the method is valid. Possible values are 'log', 'error', 'info', 'success', 'table'.
 	 */
-	public static function dumpitscript($value, $method = 'log')
+	public static function dumpitscript($value, $method = 'log') : void
 	{
-		echo "<script>console.$method(".json_encode($value).')</script>';
+		echo "<script>console.{$method}(".json_encode($value).')</script>';
 	}
 
 	/**
 	 * Get HTML text dumping a value into a "pre" tag
+	 *
 	 * @param mixed $value
 	 */
 	public static function reportit($value)
@@ -40,23 +45,29 @@ abstract class Debug
 
 	/**
 	 * Get HTML text dumping a value in the javascript console
-	 * @param mixed $value
+	 *
+	 * @param mixed  $value
 	 * @param string $method Specifies the console method to use. No check is made to ensure the method is valid. Possible values are 'log', 'error', 'info', 'success', 'table'.
+	 *
 	 * @return string
 	 */
 	public static function reportitscript($value, $method = 'log')
 	{
-		return "<script>console.$method(".json_encode($value).')</script>';
+		return "<script>console.{$method}(".json_encode($value).')</script>';
 	}
 
 	/**
 	 * Convert an exception to array
+	 *
 	 * @param \Exception $exception
+	 *
 	 * @return array
 	 */
-	public static function exception2array($exception)
+	public static function exception_to_array($exception, $max_recursion = 5)
 	{
-		if (!$exception) return null;
+		if (!$exception) {
+			return;
+		}
 		$ex = [
 			'type' => get_class($exception),
 			'message' => $exception->getMessage(),
@@ -64,10 +75,16 @@ abstract class Debug
 			'file' => $exception->getFile(),
 			'line' => $exception->getLine(),
 			'trace' => $exception->getTrace(),
-			//'previous' => $exception->getPrevious() ? exception_to_array($exception->getPrevious()) : null,
+			'previous' => $exception->getPrevious()
+				? ($max_recursion > 0
+					? static::exception_to_array($exception->getPrevious(), $max_recursion - 1)
+					: "Too many previous exception")
+				: null,
 		];
-		if (method_exists($exception, 'getSeverity'))
-			$ex['severity'] = $exception->getSeverity();
+		if (method_exists($exception, 'getSeverity')) {
+			$ex['severity'] = call_user_func([$exception, 'getSeverity']);
+		}
+
 		return $ex;
 	}
 }

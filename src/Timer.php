@@ -1,11 +1,19 @@
 <?php
 
+declare(strict_types = 1);
+
 namespace PHPTools;
 
+/**
+ * Class to record timing
+ *
+ * @version 1.2.0
+ * @author 86Dev
+ */
 class Timer
 {
 	/**
-	 * STart time
+	 * Start time
 	 *
 	 * @var float
 	 */
@@ -21,11 +29,34 @@ class Timer
 	/**
 	 * Constructor
 	 *
-	 * @param boolean $start If set to true, will automatically start the timer
+	 * @param bool $start If set to true, will automatically start the timer
 	 */
 	public function __construct($start = false)
 	{
-		if ($start) $this->start();
+		if ($start) {
+			$this->start();
+		}
+	}
+
+	/**
+	 * Show timer duration as a human readable string
+	 *
+	 * @return string
+	 */
+	public function __toString()
+	{
+		if (!$this->_start) {
+			return 'Not started';
+		}
+
+		$seconds = $this->duration();
+		$minutes = 0;
+		if ($seconds > 60.0) {
+			$minutes = intdiv($seconds, 60);
+			$seconds -= ($minutes * 60);
+		}
+
+		return sprintf('%d:%f', $minutes, $seconds);
 	}
 
 	/**
@@ -35,7 +66,9 @@ class Timer
 	 */
 	public function start()
 	{
-		if ($this->_start) return;
+		if ($this->_start) {
+			return;
+		}
 		$this->_start = microtime(true);
 	}
 
@@ -46,7 +79,9 @@ class Timer
 	 */
 	public function stop()
 	{
-		if (!$this->_start) return;
+		if (!$this->_start) {
+			return;
+		}
 		$this->_end = microtime(true);
 	}
 
@@ -60,26 +95,5 @@ class Timer
 	public function duration()
 	{
 		return !$this->_start ? 0 : ($this->_end ? $this->_end - $this->_start : microtime(true) - $this->_start);
-	}
-
-	/**
-	 * Show timer duration as a human readable string
-	 *
-	 * @return string
-	 */
-	public function __toString()
-	{
-		if (!$this->_start) return 'Not started';
-		else
-		{
-			$seconds = $this->duration();
-			$minutes = 0;
-			if ($seconds > 60.0)
-			{
-				$minutes = intdiv($seconds, 60);
-				$seconds -= ($minutes * 60);
-			}
-			return sprintf("%d:%f", $minutes, $seconds);
-		}
 	}
 }
