@@ -56,7 +56,7 @@ class Timer
 			$seconds -= ($minutes * 60);
 		}
 
-		return sprintf('%d:%f', $minutes, $seconds);
+		return sprintf('%d:%02.3f', $minutes, $seconds);
 	}
 
 	/**
