@@ -139,7 +139,7 @@ class HtmlCodes extends Enum
 	const EXPECTATION_FAILED = 417;
 
 	/** This code was defined in 1998 as one of the traditional IETF April Fools' jokes, in RFC 2324, Hyper Text Coffee Pot Control Protocol, and is not expected to be implemented by actual HTTP servers. The RFC specifies this code should be returned by teapots requested to brew coffee. This HTTP status is used as an Easter egg in some websites, including Google.com. */
-	const IMATEAPOT = 418;
+	const IM_A_TEAPOT = 418;
 
 	/** The request was directed at a server that is not able to produce a response (for example because of connection reuse). */
 	const MISDIRECTED_REQUEST = 421;
