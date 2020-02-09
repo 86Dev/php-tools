@@ -4,6 +4,8 @@ declare(strict_types = 1);
 
 namespace PHPTools;
 
+use InvalidArgumentException;
+
 /**
  * Manage a timers list
  *
@@ -15,17 +17,27 @@ class Timers
 	/**
 	 * Timers' list
 	 *
-	 * @var Timer
+	 * @var Timer[]
 	 */
 	protected $timers = [];
 
-	public function start() : void
+	public function start($key) : void
 	{
-		$this->timers[] = new Timer(true);
+		if (!$key) {
+			throw new InvalidArgumentException("A timer key must be provided");
+		}
+		$this->timers[$key] = new Timer(true);
 	}
 
-	public function stop() : void
+	public function stop($key) : void
 	{
-		end($this->timers)->stop();
+		if ($key && array_key_exists($key, $this->timers)) {
+			$this->timers[$key]->stop();
+		}
+	}
+
+	public function get($key)
+	{
+		return $key && array_key_exists($key, $this->timers) ? $this->timers[$key] : null;
 	}
 }
