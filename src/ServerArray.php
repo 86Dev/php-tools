@@ -19,7 +19,7 @@ abstract class ServerArray
 	 *
 	 * @return string
 	 */
-	public static function PHP_SELF()
+	public static function php_self()
 	{
 		return array_key_exists('PHP_SELF', $_SERVER) ? $_SERVER['PHP_SELF'] : '';
 	}
@@ -49,7 +49,7 @@ abstract class ServerArray
 	 *
 	 * @return string
 	 */
-	public static function GATEWAY_INTERFACE()
+	public static function gateway_interface()
 	{
 		return array_key_exists('GATEWAY_INTERFACE', $_SERVER) ? $_SERVER['GATEWAY_INTERFACE'] : '';
 	}
@@ -59,7 +59,7 @@ abstract class ServerArray
 	 *
 	 * @return string
 	 */
-	public static function SERVER_ADDR()
+	public static function server_addr()
 	{
 		return array_key_exists('SERVER_ADDR', $_SERVER) ? $_SERVER['SERVER_ADDR'] : '';
 	}
@@ -70,7 +70,7 @@ abstract class ServerArray
 	 *
 	 * @return string
 	 */
-	public static function SERVER_NAME()
+	public static function server_name()
 	{
 		return array_key_exists('SERVER_NAME', $_SERVER) ? $_SERVER['SERVER_NAME'] : '';
 	}
@@ -80,7 +80,7 @@ abstract class ServerArray
 	 *
 	 * @return string
 	 */
-	public static function SERVER_SOFTWARE()
+	public static function server_software()
 	{
 		return array_key_exists('SERVER_SOFTWARE', $_SERVER) ? $_SERVER['SERVER_SOFTWARE'] : '';
 	}
@@ -90,7 +90,7 @@ abstract class ServerArray
 	 *
 	 * @return string
 	 */
-	public static function SERVER_PROTOCOL()
+	public static function server_protocol()
 	{
 		return array_key_exists('SERVER_PROTOCOL', $_SERVER) ? $_SERVER['SERVER_PROTOCOL'] : '';
 	}
@@ -101,7 +101,7 @@ abstract class ServerArray
 	 *
 	 * @return string
 	 */
-	public static function REQUEST_METHOD()
+	public static function request_method()
 	{
 		return array_key_exists('REQUEST_METHOD', $_SERVER) ? $_SERVER['REQUEST_METHOD'] : '';
 	}
@@ -111,7 +111,7 @@ abstract class ServerArray
 	 *
 	 * @return string
 	 */
-	public static function REQUEST_TIME()
+	public static function request_time()
 	{
 		return array_key_exists('REQUEST_TIME', $_SERVER) ? $_SERVER['REQUEST_TIME'] : '';
 	}
@@ -121,7 +121,7 @@ abstract class ServerArray
 	 *
 	 * @return string
 	 */
-	public static function REQUEST_TIME_FLOAT()
+	public static function request_time_float()
 	{
 		return array_key_exists('REQUEST_TIME_FLOAT', $_SERVER) ? $_SERVER['REQUEST_TIME_FLOAT'] : '';
 	}
@@ -131,7 +131,7 @@ abstract class ServerArray
 	 *
 	 * @return string
 	 */
-	public static function QUERY_STRING()
+	public static function query_string()
 	{
 		return array_key_exists('QUERY_STRING', $_SERVER) ? $_SERVER['QUERY_STRING'] : '';
 	}
@@ -141,7 +141,7 @@ abstract class ServerArray
 	 *
 	 * @return string
 	 */
-	public static function DOCUMENT_ROOT()
+	public static function document_root()
 	{
 		return array_key_exists('DOCUMENT_ROOT', $_SERVER) ? $_SERVER['DOCUMENT_ROOT'] : '';
 	}
@@ -151,7 +151,7 @@ abstract class ServerArray
 	 *
 	 * @return string
 	 */
-	public static function HTTP_ACCEPT()
+	public static function http_accept()
 	{
 		return array_key_exists('HTTP_ACCEPT', $_SERVER) ? $_SERVER['HTTP_ACCEPT'] : '';
 	}
@@ -161,7 +161,7 @@ abstract class ServerArray
 	 *
 	 * @return string
 	 */
-	public static function HTTP_ACCEPT_CHARSET()
+	public static function http_accept_charset()
 	{
 		return array_key_exists('HTTP_ACCEPT_CHARSET', $_SERVER) ? $_SERVER['HTTP_ACCEPT_CHARSET'] : '';
 	}
@@ -171,7 +171,7 @@ abstract class ServerArray
 	 *
 	 * @return string
 	 */
-	public static function HTTP_ACCEPT_ENCODING()
+	public static function http_accept_encoding()
 	{
 		return array_key_exists('HTTP_ACCEPT_ENCODING', $_SERVER) ? $_SERVER['HTTP_ACCEPT_ENCODING'] : '';
 	}
@@ -181,7 +181,7 @@ abstract class ServerArray
 	 *
 	 * @return string
 	 */
-	public static function HTTP_ACCEPT_LANGUAGE()
+	public static function http_accept_language()
 	{
 		return array_key_exists('HTTP_ACCEPT_LANGUAGE', $_SERVER) ? $_SERVER['HTTP_ACCEPT_LANGUAGE'] : '';
 	}
@@ -191,7 +191,7 @@ abstract class ServerArray
 	 *
 	 * @return string
 	 */
-	public static function HTTP_CONNECTION()
+	public static function http_connection()
 	{
 		return array_key_exists('HTTP_CONNECTION', $_SERVER) ? $_SERVER['HTTP_CONNECTION'] : '';
 	}
@@ -201,7 +201,7 @@ abstract class ServerArray
 	 *
 	 * @return string
 	 */
-	public static function HTTP_HOST()
+	public static function http_host()
 	{
 		return array_key_exists('HTTP_HOST', $_SERVER) ? $_SERVER['HTTP_HOST'] : '';
 	}
@@ -211,7 +211,7 @@ abstract class ServerArray
 	 *
 	 * @return string
 	 */
-	public static function HTTP_REFERER()
+	public static function http_referer()
 	{
 		return array_key_exists('HTTP_REFERER', $_SERVER) ? $_SERVER['HTTP_REFERER'] : '';
 	}
@@ -221,7 +221,7 @@ abstract class ServerArray
 	 *
 	 * @return string
 	 */
-	public static function HTTP_USER_AGENT()
+	public static function http_user_agent()
 	{
 		return array_key_exists('HTTP_USER_AGENT', $_SERVER) ? $_SERVER['HTTP_USER_AGENT'] : '';
 	}
@@ -232,7 +232,7 @@ abstract class ServerArray
 	 *
 	 * @return string
 	 */
-	public static function HTTPS()
+	public static function https()
 	{
 		return array_key_exists('HTTPS', $_SERVER) ? $_SERVER['HTTPS'] : '';
 	}
@@ -242,7 +242,7 @@ abstract class ServerArray
 	 *
 	 * @return string
 	 */
-	public static function REMOTE_ADDR()
+	public static function remote_addr()
 	{
 		return array_key_exists('REMOTE_ADDR', $_SERVER) ? $_SERVER['REMOTE_ADDR'] : '';
 	}
@@ -253,7 +253,7 @@ abstract class ServerArray
 	 *
 	 * @return string
 	 */
-	public static function REMOTE_HOST()
+	public static function remote_host()
 	{
 		return array_key_exists('REMOTE_HOST', $_SERVER) ? $_SERVER['REMOTE_HOST'] : '';
 	}
@@ -263,7 +263,7 @@ abstract class ServerArray
 	 *
 	 * @return string
 	 */
-	public static function REMOTE_PORT()
+	public static function remote_port()
 	{
 		return array_key_exists('REMOTE_PORT', $_SERVER) ? $_SERVER['REMOTE_PORT'] : '';
 	}
@@ -273,7 +273,7 @@ abstract class ServerArray
 	 *
 	 * @return string
 	 */
-	public static function REMOTE_USER()
+	public static function remote_user()
 	{
 		return array_key_exists('REMOTE_USER', $_SERVER) ? $_SERVER['REMOTE_USER'] : '';
 	}
@@ -283,7 +283,7 @@ abstract class ServerArray
 	 *
 	 * @return string
 	 */
-	public static function REDIRECT_REMOTE_USER()
+	public static function redirect_remote_user()
 	{
 		return array_key_exists('REDIRECT_REMOTE_USER', $_SERVER) ? $_SERVER['REDIRECT_REMOTE_USER'] : '';
 	}
@@ -294,7 +294,7 @@ abstract class ServerArray
 	 *
 	 * @return string
 	 */
-	public static function SCRIPT_FILENAME()
+	public static function script_filename()
 	{
 		return array_key_exists('SCRIPT_FILENAME', $_SERVER) ? $_SERVER['SCRIPT_FILENAME'] : '';
 	}
@@ -304,7 +304,7 @@ abstract class ServerArray
 	 *
 	 * @return string
 	 */
-	public static function SERVER_ADMIN()
+	public static function server_admin()
 	{
 		return array_key_exists('SERVER_ADMIN', $_SERVER) ? $_SERVER['SERVER_ADMIN'] : '';
 	}
@@ -315,7 +315,7 @@ abstract class ServerArray
 	 *
 	 * @return string
 	 */
-	public static function SERVER_PORT()
+	public static function server_port()
 	{
 		return array_key_exists('SERVER_PORT', $_SERVER) ? $_SERVER['SERVER_PORT'] : '';
 	}
@@ -325,7 +325,7 @@ abstract class ServerArray
 	 *
 	 * @return string
 	 */
-	public static function SERVER_SIGNATURE()
+	public static function server_signature()
 	{
 		return array_key_exists('SERVER_SIGNATURE', $_SERVER) ? $_SERVER['SERVER_SIGNATURE'] : '';
 	}
@@ -336,7 +336,7 @@ abstract class ServerArray
 	 *
 	 * @return string
 	 */
-	public static function PATH_TRANSLATED()
+	public static function path_translated()
 	{
 		return array_key_exists('PATH_TRANSLATED', $_SERVER) ? $_SERVER['PATH_TRANSLATED'] : '';
 	}
@@ -346,7 +346,7 @@ abstract class ServerArray
 	 *
 	 * @return string
 	 */
-	public static function SCRIPT_NAME()
+	public static function script_name()
 	{
 		return array_key_exists('SCRIPT_NAME', $_SERVER) ? $_SERVER['SCRIPT_NAME'] : '';
 	}
@@ -356,7 +356,7 @@ abstract class ServerArray
 	 *
 	 * @return string
 	 */
-	public static function REQUEST_URI()
+	public static function request_uri()
 	{
 		return array_key_exists('REQUEST_URI', $_SERVER) ? $_SERVER['REQUEST_URI'] : '';
 	}
@@ -366,7 +366,7 @@ abstract class ServerArray
 	 *
 	 * @return string
 	 */
-	public static function PHP_AUTH_DIGEST()
+	public static function php_auth_digest()
 	{
 		return array_key_exists('PHP_AUTH_DIGEST', $_SERVER) ? $_SERVER['PHP_AUTH_DIGEST'] : '';
 	}
@@ -376,7 +376,7 @@ abstract class ServerArray
 	 *
 	 * @return string
 	 */
-	public static function PHP_AUTH_USER()
+	public static function php_auth_user()
 	{
 		return array_key_exists('PHP_AUTH_USER', $_SERVER) ? $_SERVER['PHP_AUTH_USER'] : '';
 	}
@@ -386,7 +386,7 @@ abstract class ServerArray
 	 *
 	 * @return string
 	 */
-	public static function PHP_AUTH_PW()
+	public static function php_auth_pw()
 	{
 		return array_key_exists('PHP_AUTH_PW', $_SERVER) ? $_SERVER['PHP_AUTH_PW'] : '';
 	}
@@ -396,7 +396,7 @@ abstract class ServerArray
 	 *
 	 * @return string
 	 */
-	public static function AUTH_TYPE()
+	public static function auth_type()
 	{
 		return array_key_exists('AUTH_TYPE', $_SERVER) ? $_SERVER['AUTH_TYPE'] : '';
 	}
@@ -406,7 +406,7 @@ abstract class ServerArray
 	 *
 	 * @return string
 	 */
-	public static function PATH_INFO()
+	public static function path_info()
 	{
 		return array_key_exists('PATH_INFO', $_SERVER) ? $_SERVER['PATH_INFO'] : '';
 	}
@@ -416,7 +416,7 @@ abstract class ServerArray
 	 *
 	 * @return string
 	 */
-	public static function ORIG_PATH_INFO()
+	public static function orig_path_info()
 	{
 		return array_key_exists('ORIG_PATH_INFO', $_SERVER) ? $_SERVER['ORIG_PATH_INFO'] : '';
 	}
