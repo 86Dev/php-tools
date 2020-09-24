@@ -9,6 +9,7 @@ namespace PHPTools;
  *
  * @version 1.3.0
  * @author 86Dev
+ * @link https://en.wikipedia.org/wiki/List_of_HTTP_status_codes
  */
 class HtmlCodes extends Enum
 {
